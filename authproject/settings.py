@@ -1,6 +1,6 @@
 from datetime import timedelta
 from pathlib import Path
-# from decouple import config
+import dj_database_url
 
 from django.conf import settings
 
@@ -77,15 +77,10 @@ WSGI_APPLICATION = 'authproject.wsgi.application'
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "hng_second_task_db",
-        'USER': "hng_second_task_db_user",
-        'PASSWORD': "lEX2qc0wfI00bfdsuURimytiGY6shaGS",
-        'HOST': 'postgresql://hng_second_task_db_user:lEX2qc0wfI00bfdsuURimytiGY6shaGS@dpg-cq5h9qg8fa8c7387g130-a.oregon-postgres.render.com/hng_second_task_db',
-        'PORT': '5432',
-    }
-}
+     'default': dj_database_url.config(
+         default='postgresql://hng_second_task_db_user:lEX2qc0wfI00bfdsuURimytiGY6shaGS@dpg-cq5h9qg8fa8c7387g130-a.oregon-postgres.render.com/hng_second_task_db'
+     )
+ }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
