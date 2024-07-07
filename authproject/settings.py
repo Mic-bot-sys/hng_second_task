@@ -15,9 +15,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-elm55xe@5-2^n*w=+n@f2gu63&8dw9ut9cyi6!(6adbpua_&zx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'authproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "hng_second_db",
-        'USER': "postgres",
-        'PASSWORD': "MichAels786",
-        'HOST': 'localhost',
+        'NAME': "hng_second_task_db",
+        'USER': "hng_second_task_db_user",
+        'PASSWORD': "lEX2qc0wfI00bfdsuURimytiGY6shaGS",
+        'HOST': 'postgresql://hng_second_task_db_user:lEX2qc0wfI00bfdsuURimytiGY6shaGS@dpg-cq5h9qg8fa8c7387g130-a.oregon-postgres.render.com/hng_second_task_db',
         'PORT': '5432',
     }
 }
