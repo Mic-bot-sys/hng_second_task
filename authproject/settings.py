@@ -62,7 +62,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'authproject.wsgi.application'
+WSGI_APPLICATION = 'authproject.wsgi.app'
+# WSGI_APPLICATION = 'authproject.wsgi.application'
 
 
 # Database
