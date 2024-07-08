@@ -15,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-elm55xe@5-2^n*w=+n@f2gu63&8dw9ut9cyi6!(6adbpua_&zx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -62,8 +62,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'authproject.wsgi.app'
-# WSGI_APPLICATION = 'authproject.wsgi.application'
+WSGI_APPLICATION = 'authproject.wsgi.application'
 
 
 # Database
@@ -77,11 +76,21 @@ WSGI_APPLICATION = 'authproject.wsgi.app'
 # }
 
 
+# DATABASES = {
+#      'default': dj_database_url.config(
+#          default='postgresql://hng_second_task_db_user:lEX2qc0wfI00bfdsuURimytiGY6shaGS@dpg-cq5h9qg8fa8c7387g130-a.oregon-postgres.render.com/hng_second_task_db'
+#      )
+#  }
+
 DATABASES = {
-     'default': dj_database_url.config(
-         default='postgresql://hng_second_task_db_user:lEX2qc0wfI00bfdsuURimytiGY6shaGS@dpg-cq5h9qg8fa8c7387g130-a.oregon-postgres.render.com/hng_second_task_db'
-     )
- }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mic786$hng_db',
+        'USER': 'mic786',
+        'PASSWORD': 'tolu00000',
+        'HOST': 'mic786.mysql.pythonanywhere-services.com',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
